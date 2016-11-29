@@ -2,12 +2,13 @@
 # Implement code from this book chapter: http://r4ds.had.co.nz/many-models.html
 
 # Packages
-# install.packages('modelr')
-# install.packages('tidyverse')
-# install.packages('gapminder')
+install.packages('modelr')
+install.packages('tidyverse')
+install.packages('gapminder')
 library(gapminder)
 library(modelr)
 library(tidyverse)
+
 
 # Initial view of the data with ggplot
 gapminder %>% 
@@ -90,3 +91,4 @@ gapminder %>%
   semi_join(bad_fit, by = "country") %>% 
   ggplot(aes(year, lifeExp, colour = country)) +
   geom_line()
+
